@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Visita a la Empresa</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="form-page">
+
+    <!-- Header con logo y nombre de empresa -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo/admira-logo_white.svg" alt="Logo de Admira" class="logo">
+        </div>
+    </header>
+
+    <div class="form-container">
+        <h2>Formulario de Visita a la Empresa</h2>
+        <p>Por favor, rellene el siguiente formulario para agendar su visita.</p>
+
+        <form action="#" method="post">
+            <!-- Nombre -->
+            <div class="form-group">
+                <label for="nombre">Nombre <span class="required">*</span></label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Introduce su nombre">
+            </div>
+
+            <!-- Apellido -->
+            <div class="form-group">
+                <label for="apellido">Apellido <span class="required">*</span></label>
+                <input type="text" id="apellido" name="apellido" required placeholder="Escriba su apellido">
+            </div>
+
+            <!-- Fecha de visita -->
+            <div class="form-group">
+                <label for="fecha">Fecha de visita <span class="required">*</span></label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+
+            <!-- Campo obligatorio: Teléfono -->
+            <div class="form-group">
+                <label for="telefono">Teléfono <span class="required">*</span></label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="Escriba su teléfono">
+            </div>
+
+            <!-- Estilo de música favorito (opcional) -->
+            <div class="form-group">
+                <label for="musica">Estilo de música favorito</label>
+                <select id="musica" name="musica">
+                    <option value="" disabled selected>Seleccione un estilo</option>
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="clasica">Clásica</option>
+                    <option value="electronica">Electrónica</option>
+                    <option value="hiphop">Hip-hop</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+
+            <!-- Película clásica favorita (opcional) -->
+            <div class="form-group">
+                <label for="pelicula">Película clásica favorita</label>
+                <select id="peli" name="peli">
+                    <option value="" disabled selected>Seleccione una película</option>
+                    <option value="terminator">Terminator</option>
+                    <option value="loqueelviento">Lo que el viento se llevó</option>
+                    <option value="casablanca">Casablanca</option>
+                    <option value="ciudadano_kane">Ciudadano Kane</option>
+                    <option value="mago_de_oz">El Mago de Oz</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+
+            <!-- Campo opcional: Comentarios -->
+            <div class="form-group optional">
+                <label for="comentarios">Comentarios (opcional)</label>
+                <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escriba sus comentarios aquí"></textarea>
+            </div>
+
+            <!-- Botón de envío -->
+            <div class="form-group">
+                <button type="button" class="submit-btn" onclick="procesarFormulario()">Enviar</button>
+            </div>
+            
+        </form>
+    </div>
+
+    <script src="script/script-menu.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+}
+
+/* Header general */
+.header {
+    background: #689840;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-left: 30px;
+}
+
+/* Estilos para la página del formulario */
+/* Ajuste del contenedor del formulario */
+/* Ajuste de la página del formulario */
+.form-page {
+    padding-top: 80px; /* Compensa la altura del header fijo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7fc;
+    min-height: 100vh;
+}
+
+/* Ajuste del contenedor del formulario */
+.form-container {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px; /* Aumenta el padding interno */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+.form-container p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Espaciado entre los grupos del formulario */
+.form-group {
+    margin-bottom: 25px; /* Aumenta el espacio entre los campos */
+}
+
+/* Estilo para las etiquetas */
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold; /* Resalta las etiquetas */
+    color: #555;
+    margin-bottom: 8px; /* Espaciado entre la etiqueta y el campo */
+}
+
+/* Estilo de los campos de entrada */
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px; /* Más espacio interno en los campos */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+/* Efecto de enfoque para los campos */
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #4CAF50; /* Color verde al enfocar */
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Añade un efecto luminoso */
+}
+
+/* Mejora del estilo del botón */
+.submit-btn {
+    width: 100%;
+    padding: 15px; /* Más alto para mejor apariencia */
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+/* Estilos para la página de menús */
+.menu-page {
+    padding: 20px;
+    padding-top: 120px; /* Espacio para el header fijo */
+    background-color: #f4f7fc;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.menu-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.categoria {
+    margin-bottom: 30px;
+}
+
+.categoria h2 {
+    color: #007BFF;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.categoria p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Estilo para la lista de platos */
+.platos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.plato {
+    position: relative; /* Necesario para la posición del contenido */
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden; /* Oculta el contenido desbordado */
+}
+
+.plato label {
+    cursor: pointer;
+    width: 100%;
+}
+
+.plato input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Descripción plegable por debajo */
+.plato .descripcion {
+    max-height: 0; /* Altura inicial 0 para plegarse */
+    overflow: hidden; /* Oculta el contenido mientras está plegado */
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    color: #fff;
+    padding: 0 10px; /* Ajusta el padding para que solo se aplique horizontalmente al inicio */
+    border-radius: 5px;
+    font-size: 14px;
+    transition: max-height 0.3s ease, padding 0.3s ease; /* Transición suave */
+}
+
+/* Muestra la descripción al hacer hover */
+/* Mostrar la descripción al hacer hover */
+.plato:hover .descripcion {
+    max-height: 180px; /* Altura máxima desplegada, ajusta según el contenido */
+    padding: 10px; /* Añade el padding vertical al desplegar */
+}
+
+/* Estilo para mantener la alineación */
+.plato label {
+    display: block; /* Asegura que el label ocupe todo el ancho */
+    margin-bottom: 5px;
+}
+
+/* Botones generales del menú*/
+ .menu-page button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #689840;
+}
+
+/* Botón per decrementar */
+.categoria .platos .plato .cantidad .decrementar {
+    background-color: #dc3545;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+  
+.categoria .platos .plato .cantidad .decrementar:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+}
+
+/* Botón per incrementar */
+.categoria .platos .plato .cantidad .incrementar {
+    background-color: #28a745;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+  
+.categoria .platos .plato .cantidad .incrementar:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}  
+
+
+.procesar button{
+    background: #689840;
+    color: white;
+}
